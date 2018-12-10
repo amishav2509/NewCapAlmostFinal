@@ -1,0 +1,8 @@
+<div>
+  <table>
+    <tr *ngFor='let x of receiveFriendRequest'>
+      <td>{{x.senderEmailID}}</td>
+      <td><app-button [friendEmailID] ='x.senderEmailID'></app-button></td>
+      </tr>
+  </table>
+</div> 

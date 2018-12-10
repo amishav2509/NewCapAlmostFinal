@@ -1,0 +1,66 @@
+<div class="topnav" id="myHeader">          
+    <div class="topnavname">
+        CapBook
+    </div>
+</div>
+      
+<div class="content">
+    <div id="left">
+        <div class="panel-body" align="center">
+            <br>
+            <div id="title">Create Your CapBook Account </div>
+                <br><br>
+                <div class="row" align="center">
+                    <p *ngIf="message" class="text-center error" style="color: red">{{message}}</p>
+                    <form #RegistrationForm="ngForm" (ngSubmit)="register()">
+                        <div class="form-group">
+                            <input  type="text" name="firstName" id="firstName" [(ngModel)]="firstName" #firstNameValid="ngModel" pattern="[A-Za-z]+" [ngModelOptions]="{updateOn: 'blur'}" autocomplete="off" required placeholder="First Name" style="padding: 10px 18px;border-radius: 6px;font-size: 15px"><br><br>
+                            <div id="message" [hidden]="firstNameValid.valid || firstNameValid.pristine" >Improper First Name.</div>
+                        </div>
+                        <div class="form-group">
+                            <input  type="text" name="lastName" id="lastName" [(ngModel)]="lastName" #lastNameValid="ngModel" pattern="[A-Za-z]+" [ngModelOptions]="{updateOn: 'blur'}" autocomplete="off" required placeholder="Last Name" style="padding: 10px 18px;border-radius: 6px;font-size: 15px"><br><br>
+                            <div id="message" [hidden]="lastNameValid.valid || lastNameValid.pristine" >Improper Last Name.</div>
+                        </div>
+                        <div class="form-group">
+                            <input  type="email" name="email" id="emailID" [(ngModel)]="emailID" #emailValid="ngModel" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" [ngModelOptions]="{updateOn: 'blur'}" autocomplete="off" required placeholder="Email Address" style="padding: 10px 18px;border-radius: 6px;font-size: 15px"><br><br>
+                            <div id="message" [hidden]="emailValid.valid || emailValid.pristine" >Invalid email Id. </div>
+                        </div> 
+                        
+                        <div class="form-group">
+                            <input type="password"  name="password" id="password" [(ngModel)]="password" #passwordValid="ngModel" required placeholder="Password" [ngModelOptions]="{updateOn: 'blur'}" style="padding: 10px 18px;border-radius: 6px;font-size: 15px"><br><br> 
+                            <div id="message" [hidden]="passwordValid.valid || passwordValid.pristine" >Password is Required.</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password"  name="confirmPassword" id="confirmPassword" [(ngModel)]="confirmPassword" #confirmPasswordValid="ngModel" required placeholder="Confirm password" [ngModelOptions]="{updateOn: 'blur'}" style="padding: 10px 18px;border-radius: 6px;font-size: 15px"><br><br> 
+                            <div id="message" [hidden]="confirmPasswordValid.valid || confirmPasswordValid.pristine" >Password mismatch.</div>
+                        </div>
+                        <div class="form-group">
+                            <input placeholder="Date Of Birth" class="textbox-n" type="text" onfocus="(this.type='date')" name="dob" id="dob" [(ngModel)]="dob" #dobValid="ngModel" required [ngModelOptions]="{updateOn: 'blur'}" style="padding: 10px 18px;border-radius: 6px;font-size: 15px"><br><br> 
+                            <div id="message" [hidden]="dobValid.valid || dobValid.pristine" >Date of Birth is required.</div>
+                        </div>
+                        <div class="form-group">
+                            Gender:  
+                            <select name="gender" [(ngModel)]="gender" required [ngModelOptions]="{updateOn: 'blur'}" style="padding: 10px 18px;border-radius: 6px;font-size: 15px">
+                                <option value="" disabled selected>Gender</option>    
+                                <option value="Male" >Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            </div>
+                        <div class="row" align="center">
+                            <button class="btn btn-sm btn-primary" type="submit" name="submit" id="submit" [disabled]="!RegistrationForm.form.valid">Register</button><br><br>
+                        </div>
+                    </form>
+                </div>
+                <div class="row" align="center">
+                    <a [routerLink]="['/welcomeComponent']">
+                    <button class="btn btn-sm btn-primary" type="submit" name="submit" id="submit1">Already have an Account</button></a><br><br>
+                </div>
+            </div>           
+        </div> 
+    <div id="center">
+        <img src="./assets/2.jpg" id="img"
+            class="img-responsive center-block"/>
+    </div>  
+</div>
+                        

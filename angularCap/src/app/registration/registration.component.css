@@ -1,0 +1,89 @@
+.topnav {
+  overflow: hidden;
+  background-color:cadetblue;
+  width:100%;
+}
+.topnav .topnavname{
+  float:left;
+  padding-left: 40px;
+  padding-top: 5px;
+  font-size: 40px;
+  font-style:unset;
+  color: rgba(243, 141, 7, 0.664);
+  -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: black;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#title{
+   font-size: 30px;
+   font-style:unset;
+   color:lightseagreen;
+   -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+   font-family: cursive;
+  }
+  .content {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  } 
+
+#center{
+    float:left;
+    width:65%;
+    height: 100%;
+    background: #63c0ccf8;
+    overflow-y:auto;
+   } 
+#center #img{
+    float:left;
+    width:110%;
+    height: 95%;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+  } 
+
+#left{
+    float:left;
+    width:35%;
+    height:100%;
+    background: #06526b;
+    overflow-y: scroll;
+    overflow: hidden;
+  } 
+.form-group{
+    color:black;
+    font-size: 20px;
+  }
+   
+.form-group #message{
+    color:red;
+  }
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+    
+.ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }
+#submit{
+   background-color: #4CAF50;
+   color: white;
+   width: 50%;
+   padding: 8px 17px;
+   text-align: center;
+   font-size: 15px;
+   border-radius: 6px;
+  }
+#submit1{
+    background-color: #4CAF50;
+    color: white;
+    width: 50%;
+    padding: 8px 17px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+  

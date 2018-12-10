@@ -1,0 +1,15 @@
+.crop{
+    overflow: hidden;
+}
+div{
+    cursor: pointer;
+}
+#submit2{
+    background-color:#4CAF50;
+    color: white;
+    width: 300%;
+    padding: 8px 17px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 6px;
+}

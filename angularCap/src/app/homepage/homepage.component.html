@@ -1,0 +1,123 @@
+<div class="topnav" id="myHeader">
+        <div class="topnavname">
+            CapBook
+        </div>
+        <div class="search-container" style="float:left;margin-left: 100px;">
+            
+            <form #SearchForm="ngForm" (ngSubmit)="search()">
+            <input  type="email" name="email" id="email" [(ngModel)]="personEmailID" #emailValid="ngModel" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" [ngModelOptions]="{updateOn: 'blur'}" autocomplete="off" required placeholder="Search People" style="padding: 10px 18px;border-radius: 6px;font-size: 15px"><br><br>
+            <button type="submit" value="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="topnavlinks" >
+            <a  (click)="logout()">LogOut</a>
+            <a  (click)="timeline()">Profile</a>
+            <a  class="active" href="#">Home</a>
+          </div>          
+    </div>
+    <div class="content">
+        <div id="left">
+            <br><br><br><br><br><br><br><br>
+            <div>
+                <ul>
+                    <li><a>Online Friends</a></li>
+                    <li><a (click)="chats()">Chats</a></li>
+                </ul>
+            </div>
+            <div>
+                <form id="myform">
+                    <input type="text" id="email" name="email" style="display: none;">
+                    <input type="text" id="statusid" name="statusid" style="display: none;">
+                    <input type="text" value="homebook.jsp" name="calledfrom" style="display: none;">
+                </form>
+            </div>
+        </div>
+        <div id="center">
+            {{emailID}}
+            {{userAccountDetails.emailID}}
+            {{userAccountDetails.friendRequest}}
+              
+                <div id="myModal" class="modal">
+    
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Upload Photo</p>
+      <form  method="post"  >
+              <input type="file" name="picture">
+              <input type="submit" value="save">
+          </form>
+    </div>
+    
+    </div>
+                <div id="myModal1" class="modal1">
+    
+    <!-- Modal content -->
+    <div class="modal-content1">
+      <span class="close1">&times;</span>
+     
+      <div id="mymodal-content">
+          
+      </div>
+    </div>
+    
+    </div>
+             
+              <div class="tab">
+    <button class="tablinks" >Status Update</button>
+    <button class="tablinks" >Upload Photo</button>
+    
+    </div>
+              <div id="London" class="">
+                  <form action="statusupdate" >
+                      <textarea name="status" style="width: 100%;height: 100px;" placeholder="What's in your mind!!!"> </textarea>
+                      <input type="submit" value="post">
+                  </form>
+    </div>
+              
+    
+    <div id="Paris"  class="tabcontent">
+      <form method="post" >
+          <textarea placeholder="What's in your mind!!!" name="status" style="width: 100%;height: 100px;" > </textarea>
+          <input type="file" value="upload" name="photo">
+          
+          <input type="submit" value="submit">
+      </form>
+    </div>
+           
+    
+              
+          </div>
+          <div id="right">
+               <br>                <br>                <br>                <br>                <br>
+                  <br>
+                  <br>
+                   <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+              <div>
+                     <ul type="square">
+      
+      <li><a >Notification</a></li>
+      <li><a (click)="friendRequest()">Friend Requests<span id="total" style="color: #6df2ff"></span></a></li>
+      
+    </ul>
+                  </div>
+          </div>
+              
+              
+              
+              
+          </div>
+    
+    
+    

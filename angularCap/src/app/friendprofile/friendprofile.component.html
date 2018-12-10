@@ -1,0 +1,34 @@
+<div class="topnav" id="myHeader">          
+  <div class="topnavname">
+    CapBook
+  </div>
+  
+  <div class="topnavlinks" >
+    <a  (click)="back()">Back</a>
+  </div>
+</div>
+<div class="content">
+  <div id="left">
+     <div class="profilephoto">
+        <a href="#">
+           <img  alt="<%=email%>" src="<%=path%>" width="100%" height="100%">
+        </a>
+      </div>
+      <br> <br>
+        <div id="addFriend">
+          <a  (click)="addFriend()">Add Friend</a>
+        </div>  
+
+  </div>
+  <div id="center">
+      {{receiverEmailID}}
+      {{userAccountDetailsOfReceiver.firstName}}
+      {{userAccountDetailsOfReceiver.lastName}}
+      {{userAccountDetailsOfReceiver.dob}}
+      {{userAccountDetailsOfReceiver.gender}}
+  </div>
+  <div id="right">
+
+  </div>  
+</div>
+                  
